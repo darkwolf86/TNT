@@ -1,7 +1,8 @@
-
 :root {
   --purple: #a66cff;
   --purple-glow: #bb86fc;
+  --pink: #ff66cc;
+  --pink-glow: #ff99dd;
   --bg-dark: #0e0b16;
   --bg-card: #1a1525;
   --text-light: #f2f2f7;
@@ -114,7 +115,6 @@ button.primary:hover {
   transform: translateY(-2px);
 }
 
-/* Form & focus */
 input, select, textarea {
   background: #2b2440;
   border: 1px solid #444;
@@ -158,12 +158,77 @@ input:focus, select:focus, textarea:focus {
 
 .calendar td {
   background: #1a1525;
+  color: var(--text-light);
 }
 
 .calendar td.event-day {
-  background: var(--purple);
   color: #fff;
   box-shadow: 0 0 8px var(--purple-glow);
+}
+
+/* Dance Night */
+.event-day.dance-night {
+  background-color: var(--purple);
+  box-shadow: 0 0 8px var(--purple-glow);
+}
+
+.event-day.dance-night:hover {
+  background-color: var(--purple-glow);
+}
+
+/* Workshop */
+.event-day.workshop {
+  background-color: var(--pink);
+  box-shadow: 0 0 8px var(--pink-glow);
+}
+
+.event-day.workshop:hover {
+  background-color: var(--pink-glow);
+}
+
+/* Tooltip for event days */
+.event-day {
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.event-day::after {
+  content: attr(data-event);
+  position: absolute;
+  left: 50%;
+  bottom: 125%;
+  transform: translateX(-50%);
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.event-day:hover::after {
+  opacity: 1;
+}
+
+.event-day::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 115%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1c1c1c transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.event-day:hover::before {
+  opacity: 1;
 }
 
 footer.site-footer {

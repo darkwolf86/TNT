@@ -1,36 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Events - TNT VR Dance Club</title><link rel="stylesheet" href="styles/club.css"></head>
-<body><a href="#main" class="skip-link">Skip to content</a>
-<header role="banner">
-  <div class="site-title">TNT VR Dance Club</div>
-  <nav role="navigation" aria-label="Main Navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="join.html">Join Us</a></li>
-    </ul>
-  </nav>
-</header>
-<main id="main">
-  <div class="card">
-    <h1>Events Calendar</h1>
-    <p>Check out upcoming dance nights and workshops. Edit this table each month!</p>
-    <table class="calendar" role="grid" aria-label="November 2025 Calendar">
-      <caption>November 2025</caption>
-      <thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
-      <tbody>
-        <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
-        <tr><td>4</td><td class="event-day" aria-label="Workshop November 5">5</td><td>6</td><td>7</td><td class="event-day" aria-label="Dance Night November 8">8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td class="event-day" aria-label="Workshop November 16">16</td><td>17</td></tr>
-        <tr><td>18</td><td class="event-day" aria-label="Workshop November 19">19</td><td>20</td><td>21</td><td class="event-day" aria-label="Dance Night November 22">22</td><td>23</td><td>24</td></tr>
-        <tr><td>25</td><td>26</td><td>27</td><td>28</td><td class="event-day" aria-label="Dance Night November 29">29</td><td>30</td><td></td></tr>
-      </tbody>
-    </table>
-  </div>
-</main><footer class="site-footer" role="contentinfo">
-  <p>&copy; 2025 TNT VR Dance Club | Designed for ITIS 3135 | Accessible, Dark Mode Friendly</p>
-</footer></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - TNT VR Dance Club</title>
+  <link rel="stylesheet" href="styles/club.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header role="banner">
+    <div class="site-title">TNT VR Dance Club</div>
+    <nav role="navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="join.html">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="card">
+      <h1>Events Calendar</h1>
+      <p>Check out upcoming dance nights and workshops. Edit this table each month!</p>
+
+      <table class="calendar" role="grid" aria-label="November 2025 Calendar">
+        <caption>November 2025</caption>
+        <thead>
+          <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td class="event-day dance-night" data-event="Dance Night: 7–9 PM">2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td class="event-day workshop" data-event="Workshop: Dance workshop from 6–8 PM">5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td class="event-day dance-night" data-event="Dance Night: 7–9 PM">9</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td class="event-day dance-night" data-event="Dance Night: 7–9 PM">16</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td class="event-day workshop" data-event="Workshop: Salsa workshop, 6–8 PM">19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td class="event-day dance-night" data-event="Dance Night: 7–9 PM">23</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td class="event-day dance-night" data-event="Dance Night: 7–9 PM">30</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2025 TNT VR Dance Club | Designed for ITIS 3135 | Accessible, Dark Mode Friendly</p>
+  </footer>
+</body>
+</html>
