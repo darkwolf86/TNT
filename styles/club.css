@@ -282,3 +282,46 @@ footer.site-footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   Gallery Page Styles
+   ========================= */
+.gallery-section {
+  margin-bottom: 2rem;
+  background: #1a1525;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+h2.month-title {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--purple);
+  text-shadow: 0 0 8px var(--purple-glow);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(166,108,255,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px var(--purple-glow);
+}
+
+@media (max-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
