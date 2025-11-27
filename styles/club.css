@@ -335,3 +335,57 @@ textarea {
   border-radius: 0.5rem;
   resize: vertical;
 }
+/* =========================
+   Random Slideshow Section
+   ========================= */
+.slideshow-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #1f1a2b;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(166,108,255,0.25);
+  position: relative;
+}
+
+.slideshow-inner img {
+  width: 100%;
+  display: none;
+  border-radius: 12px;
+}
+
+.slideshow-inner img.active {
+  display: block;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Smooth fade between images */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.01); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Dots */
+.slideshow-dots {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.slideshow-dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 4px;
+  border-radius: 50%;
+  background: rgba(166,108,255,0.4);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(166,108,255,0.3);
+}
+
+.slideshow-dots span.active {
+  background: var(--pink);
+  box-shadow: 0 0 10px var(--pink-glow);
+  transform: scale(1.2);
+}
